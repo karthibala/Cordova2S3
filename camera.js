@@ -28,6 +28,7 @@ function onFail(message)
 // Gets a photo using the device's camera
 function capturePhoto()
 {
+	alert("img capture");
 	navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50, destinationType: destinationType.FILE_URI });
 }
 
@@ -40,6 +41,7 @@ function getPhoto(source)
 // Uploads the image to S3
 function uploadPhoto()
 {
+	alert("upload start");
 	var myImg = document.getElementById('myImg');
 	var options = new FileUploadOptions();
 	options.key="file.jpg"; // temporary key for testing

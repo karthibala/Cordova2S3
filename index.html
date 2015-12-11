@@ -1,15 +1,23 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+
 <html>
 <head>
-	<title>Basic Upload to S3</title>
-	<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
-	<script type="text/javascript" charset="utf-8" src="camera.js"></script>
+    <meta charset="utf-8">
+    <meta content="telephone=no" name="format-detection">
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta content=
+    "user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi"
+    name="viewport">
+    <script src="cordova.js" type="text/javascript"></script>
+	<script src="js/index.js" type="text/javascript"></script>
+    <title>Camera Cordova Plugin</title>
 </head>
-<body bgcolor="#a6dbcf">
-	<button onclick="capturePhoto();">Take Picture with Camera</button>
-	<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">Use Picture from Library</button> <br />
-	<img style="display:none;height:40px;" id="myImg" src="" /> <br />
-	
-	<button onclick="uploadPhoto();">Upload</button>
+
+<body>
+    <button onclick="capturePhoto();">Capture Photo</button><br>
+    <button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">From Photo
+    Library</button><br>
+    <img id="image" src="" style="display:none;width:100%;">
+    <button onclick="upload();">Upload</button>
 </body>
 </html>
