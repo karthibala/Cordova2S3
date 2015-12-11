@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Basic Upload to S3</title>
+	<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
+	<script type="text/javascript" charset="utf-8" src="camera.js"></script>
+</head>
+<body bgcolor="#a6dbcf">
+	<button onclick="capturePhoto();">Take Picture with Camera</button>
+	<button onclick="getPhoto(pictureSource.PHOTOLIBRARY);">Use Picture from Library</button> <br />
+	<img style="display:none;height:40px;" id="myImg" src="" /> <br />
+	
+	<button onclick="uploadPhoto();">Upload</button>
+</body>
+</html>
